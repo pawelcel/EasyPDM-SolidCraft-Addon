@@ -36,6 +36,6 @@ Releases carry `EasyPDM_SolidCraft_Companion_win-x64_vX.zip` and
 `EasyPDM_SolidCraft_Companion_linux-x64_vX.zip` (named after SolidCraft, the program it is for):
 one self-contained program (no .NET to install) with the SolidCraft plugin package beside it,
 which `setup-solidcraft` picks up by itself. Installing step by step:
-[SolidCraft](https://github.com/pawelcel/EasyPDM/wiki/SolidCraft) on the wiki.
+[Installation](https://github.com/pawelcel/EasyPDM-SolidCraft-Addon/wiki/Installation) on this add-on's wiki.
 
 Build: `dotnet build companion` (.NET 10, no other dependencies).

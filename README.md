@@ -11,9 +11,9 @@ Upload, Download, Log in and Log out for [SolidCraft](https://github.com/tangenc
 0.9 or later. Until 0.9 this lived in the EasyPDM repository (`EasyPDM.SolidCraft/` and
 `EasyPDM.Companion/`); its history came along.
 
-![SolidCraft's Plugins menu with EasyPDM's Upload, Download, Log in and Log out](https://raw.githubusercontent.com/wiki/pawelcel/EasyPDM/images/solidcraft-plugins-menu.png)
+![SolidCraft's Plugins menu with EasyPDM's Upload, Download, Log in and Log out](https://raw.githubusercontent.com/wiki/pawelcel/EasyPDM-SolidCraft-Addon/images/solidcraft-plugins-menu.png)
 
-**Installing step by step, with screenshots: [SolidCraft](https://github.com/pawelcel/EasyPDM/wiki/SolidCraft) on the EasyPDM wiki.**
+**Installing step by step, with screenshots: [Installation](https://github.com/pawelcel/EasyPDM-SolidCraft-Addon/wiki/Installation) on this add-on's wiki.**
 Downloads: the companion zip for Windows or Linux from the [latest release](https://github.com/pawelcel/EasyPDM-SolidCraft-Addon/releases).
 
 SolidCraft plugins are WebAssembly components with **no network access** (SolidCraft's plugin
@@ -57,7 +57,7 @@ SolidCraft has no drawing workspace yet, so there is no title block or drawing P
 
 ## Setting it up on a computer
 
-Step by step with screenshots, for Windows and Linux: [SolidCraft](https://github.com/pawelcel/EasyPDM/wiki/SolidCraft) on the wiki.
+Step by step with screenshots, for Windows and Linux: [Installation](https://github.com/pawelcel/EasyPDM-SolidCraft-Addon/wiki/Installation) on this add-on's wiki.
 
 Needs **SolidCraft 0.43** or later: Upload saves and exports through SolidCraft's `file` commands,
 which a plugin may use only when the user grants it that command group, and 0.42 has no way to

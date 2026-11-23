@@ -14,7 +14,7 @@ released with EasyPDM itself; see the
 
 ![SolidCraft Preferences → Plugins with the EasyPDM plugin installed and turned on](https://raw.githubusercontent.com/wiki/pawelcel/EasyPDM/images/solidcraft-plugin-installed.png)
 
-**Install:** download the companion zip for your system below (`win-x64` or `linux-x64`); it holds the companion program and the plugin, with nothing else to install. Then follow [installing step by step](https://github.com/pawelcel/EasyPDM/wiki/SolidCraft) on the wiki: log in, set up the plugin, install it in SolidCraft, start the companion with your login.
+**Install:** download the companion zip for your system below (`win-x64` or `linux-x64`); it holds the companion program and the plugin, with nothing else to install. Then follow [installing step by step](https://github.com/pawelcel/EasyPDM-SolidCraft-Addon/wiki/Installation) on the wiki: log in, set up the plugin, install it in SolidCraft, start the companion with your login.
 
 ### Changed
 - **A repository of its own**, moved out of EasyPDM (`EasyPDM.SolidCraft/` became the top level and `plugin/`, `EasyPDM.Companion/` became `companion/`) with its history, released on its own as the FreeCAD and SolidWorks integrations are.
