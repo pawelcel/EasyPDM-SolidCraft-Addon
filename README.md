@@ -11,7 +11,7 @@ Upload, Download, Log in and Log out for [SolidCraft](https://github.com/tangenc
 0.9 or later. Until 0.9 this lived in the EasyPDM repository (`EasyPDM.SolidCraft/` and
 `EasyPDM.Companion/`); its history came along.
 
-![SolidCraft's Plugins menu with EasyPDM's Upload, Download, Log in and Log out](https://raw.githubusercontent.com/wiki/pawelcel/EasyPDM-SolidCraft-Addon/images/solidcraft-plugins-menu.png)
+![SolidCraft's Model ribbon with EasyPDM's Upload, Download, Log in and Log out in its Plugins group](https://raw.githubusercontent.com/wiki/pawelcel/EasyPDM-SolidCraft-Addon/images/solidcraft-plugins-ribbon.png)
 
 **Installing step by step, with screenshots: [Installation](https://github.com/pawelcel/EasyPDM-SolidCraft-Addon/wiki/Installation) on this add-on's wiki.**
 Downloads: the companion zip for Windows or Linux from the [latest release](https://github.com/pawelcel/EasyPDM-SolidCraft-Addon/releases).
