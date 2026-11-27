@@ -20,7 +20,7 @@ SolidCraft plugins are WebAssembly components with **no network access** (SolidC
 RFC reserves it for signed plugins from a future curated index; EasyPDM asked for a path for
 self-hosted servers in tangency-labs/solidcraft#17343). So the integration has two parts:
 
-- **`plugin/`** — the SolidCraft plugin (Rust, `craft:plugin@0.1.0`). Its menu entries (Plugins > EasyPDM)
+- **`plugin/`** — the SolidCraft plugin (Rust, `craft:plugin@0.1.0`). Its commands (Upload, Download, Log in, Log out)
   prepare an upload in a folder the user grants at install time (the *outbox*): the design as
   `.sc`, a STEP of it and a `<id>.request.json` with the design properties (part number,
   revision…) and EasyPDM's link to the item, kept under the design metadata key
@@ -70,14 +70,20 @@ grants the groups and folders the plugin asks for.
    `Documents/EasyPDM/easypdm-solidcraft.zip`, the plugin with this computer's outbox path set
    in its upload form (SolidCraft takes only absolute paths inside a granted folder, and a
    plugin cannot learn its grant's path).
-3. SolidCraft: Preferences > Plugins > Install plugin…, that file; allow the `file` command
+3. SolidCraft: Preferences (the gear icon) > Plugins > Install plugin…, that file; allow the `file` command
    group and the `outbox` folder, read and write (SolidCraft's file commands see only folders
    granted both).
 4. `easypdm-companion autostart`, so `watch` runs whenever you are logged in.
 5. To open downloads in SolidCraft: Preferences > Assistant > Agents through MCP > Let AI agents connect.
 
-The Plugins menu then has **EasyPDM > Upload / Download / Log in / Log out**. The menu entries only
-leave requests in the outbox; the companion does the work.
+**Upload / Download / Log in / Log out** are then buttons in the **Plugins** group of the
+**Model** ribbon (SolidCraft up to 0.43 also lists them in its Plugins menu under EasyPDM). They
+only leave requests in the outbox; the companion does the work, so keep it running.
+
+Every command writes its request file, so every entry is declared `"effect": "edit"`, even the
+ones that change nothing in the design: since tangency-labs/solidcraft#18741 SolidCraft refuses
+the `write-file` host import to a `read` entry whatever folders were granted ("read entry may not
+use the host import write-file"), which broke Log in, Log out and Download before 0.9.1.
 
 The names come from each entry's `menu` slot: SolidCraft 0.42 and 0.43 title a plugin command in
 the Plugins menu with its menu slot's name, and 0.43 additionally moves an entry into its File or
@@ -118,6 +124,9 @@ plugin/build.sh      # needs Rust (target wasm32-unknown-unknown) and wasm-tools
   browser, Download picked it in the tab Upload had opened, saved it and opened it in SolidCraft
   once "Let AI agents connect" was on. Without that setting the design is saved and the result
   says why it was not opened.
+- In SolidCraft 0.50's window: the old plugin's Log in refused with "read entry may not use the
+  host import write-file"; plugin 0.9.1 installed from the ribbon-era Preferences > Plugins left its
+  request, and the running companion opened the browser to approve the sign-in.
 - Also in the window: Log in / Log out from the plugin's menu, and an assembly of two linked
   designs (components as items of their own, the assembly proposed as an Assembly in the form,
   the BOM set, the transfer panel showing the tree), the preview uploaded with its background
